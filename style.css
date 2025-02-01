@@ -1,34 +1,109 @@
-/* General Styles for All Pages */
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styling */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;  /* Clean white background */
+    color: #333333;             /* Soft dark gray text */
+    line-height: 1.8;
+    padding: 20px;
 }
 
-/* Portfolio Page Specific Styles */
-.portfolio-page {
-    background-color: #e8f8f5; /* Light teal background */
+/* Header Styling */
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0; /* Subtle line for separation */
 }
 
-.portfolio-page h1 {
-    color: #1abc9c;
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 10px;
 }
 
-/* About Page Specific Styles */
-.about-page {
-    background-color: #fef9e7; /* Light yellow background */
+/* Navigation Styling */
+nav {
+    margin-top: 10px;
 }
 
-.about-page h1 {
-    color: #f39c12;
+nav a {
+    margin: 0 15px;
+    color: #555555;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-/* Contact Page Specific Styles */
-.contact-page {
-    background-color: #fdebd0; /* Light peach background */
+nav a:hover {
+    color: #000000;
 }
 
-.contact-page h1 {
-    color: #e67e22;
+/* Underline effect on hover */
+nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #000000;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Section Styling */
+section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #222222;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1rem;
+    color: #555555;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+    color: #888888;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 15px;
+    }
 }
